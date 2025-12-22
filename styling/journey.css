@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0b10;
+  color: #eaeaf0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BACKGROUND GRID */
+.journey {
+  min-height: 100vh;
+  padding: 80px 100px;
+  background:
+    radial-gradient(circle at top left, #7f5cff22, transparent 40%),
+    linear-gradient(#0b0b10, #0b0b10);
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #9f7aea, #7f5cff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+/* CONTENT */
+.content {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* AVATAR */
+.avatar-box {
+  position: relative;
+  background: #f4e8c1;
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 0 0 40px rgba(127,92,255,0.3);
+}
+
+.avatar-box img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+/* BADGES */
+.badge {
+  position: absolute;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: #111;
+  color: white;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+.ts { top: -10px; left: -10px; background: #3178c6; }
+.js { right: -10px; top: 40%; background: #f7df1e; color: #000; }
+.react { bottom: -12px; left: 50%; transform: translateX(-50%); background: #61dafb; color: #000; }
+
+/* INFO */
+.info h2 {
+  font-size: 36px;
+}
+
+.info h2 span {
+  color: #9f7aea;
+}
+
+.description {
+  margin: 20px 0 40px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 24px rgba(139,92,246,0.35);
+}
+
+/* BUTTONS */
+.buttons2 {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn2 {
+  padding: 14px 26px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.primary {
+  background: linear-gradient(90deg, #9f7aea, #7f5cff);
+  color: #fff;
+}
+
+.primary:hover {
+  box-shadow: 0 0 24px rgba(127,92,255,0.6);
+}
+
+.outline {
+  border: 1px solid #7f5cff;
+  color: #cbbcff;
+}
+
+.outline:hover {
+  background: #7f5cff22;
+}
+
+/* FLOATING ANIMATIONS */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes floatFast {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.float-medium {
+  animation: float 5s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: floatFast 4s ease-in-out infinite;
+}
+
+/* ================= FORCE RESPONSIVE FIX ================= */
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---------- Laptop ↓ ---------- */
+@media (max-width: 1200px) {
+  .journey {
+    padding: 70px 60px;
+  }
+
+  .content {
+    grid-template-columns: 360px 1fr;
+    gap: 60px;
+  }
+}
+
+/* ---------- Tablet ↓ ---------- */
+@media (max-width: 992px) {
+  .journey {
+    padding: 60px 40px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .avatar-box {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .buttons2 {
+    justify-content: center;
+  }
+}
+
+/* ---------- Mobile ↓ ---------- */
+@media (max-width: 600px) {
+  .journey {
+    padding: 50px 20px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .avatar-box {
+    max-width: 260px;
+    padding: 12px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .info h2 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------- Small Phones ↓ ---------- */
+@media (max-width: 400px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .info h2 {
+    font-size: 24px;
+  }
+
+  .avatar-box {
+    max-width: 220px;
+  }
+}

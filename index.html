@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soyab – Full Stack Developer</title>
+  <link rel="stylesheet" href="styling/style.css" />
+  <link rel="stylesheet" href="styling/skills.css">
+  <link rel="stylesheet" href="styling/journey.css">
+  <link rel="stylesheet" href="styling/project.css">
+  <link rel="stylesheet" href="styling/exp.css">
+  <link rel="stylesheet" href="styling/contact.css">
+</head>
+<body>
+
+<section class="hero">
+  <canvas id="c"></canvas>
+
+  <div class="prp">
+
+    <!-- ORBIT -->
+    <div class="hero-orbit">
+      <div class="banner">
+        <div class="slider" style="--quantity:6">
+          <div class="item" style="--position:1"><img src="assets/icon1.png"></div>
+          <div class="item" style="--position:2"><img src="assets/icon2.png"></div>
+          <div class="item" style="--position:3"><img src="assets/icon3.png"></div>
+          <div class="item" style="--position:4"><img src="assets/icon4.png"></div>
+          <div class="item" style="--position:5"><img src="assets/icon5.png"></div>
+          <div class="item" style="--position:6"><img src="assets/icon6.png"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ ORBIT CENTER -->
+    <div class="content-center">
+      <div class="profile">
+        <img src="assets/profile.png" class="avatar" />
+        <div class="text">
+          <h1>Soyab</h1>
+          <h2>Full-Stack Developer</h2>
+          <p>NodeJS | React | JS | TS | Python | PHP | WordPress</p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a class="btn" href="mail:soyabk048@gmail.com"> ✉ Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/ken002/">in LinkedIn</a>
+        <a class="btn" href="https://github.com/soyabk04">⍌ GitHub</a>
+        <a class="btn">NextFrameLab</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="skills">
+
+  <div class="preview">
+    <h1>Explore My Skills <span>→</span></h1>
+
+    <div class="cube-scene">
+      <div class="cube" id="cube">
+        <div class="face front"><img><h3></h3><p></p></div>
+        <div class="face back"><img><h3></h3><p></p></div>
+        <div class="face right"><img><h3></h3><p></p></div>
+        <div class="face left"><img><h3></h3><p></p></div>
+        <div class="face top"><img><h3></h3><p></p></div>
+        <div class="face bottom"><img><h3></h3><p></p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="tabs">
+      <button data-cat="frontend" class="active">Front-end</button>
+      <button data-cat="backend">Back-end</button>
+    </div>
+
+    <h2 id="section-title">Front-end</h2>
+    <div class="grid"></div>
+  </div>
+
+</section>
+<section class="projects-section" id="projects">
+
+  <!-- BACKGROUND -->
+  <div class="projects-bg">
+    <svg class="projects-hud" viewBox="0 0 1200 400" preserveAspectRatio="none">
+      <path d="M40 80 H200 V140" />
+      <path d="M400 40 V120 H520" />
+      <path d="M780 60 H900 V140" />
+      <path d="M1020 220 V300 H1100" />
+      <circle cx="200" cy="140" r="4" />
+      <circle cx="520" cy="120" r="4" />
+      <circle cx="900" cy="140" r="4" />
+    </svg>
+  </div>
+
+  <!-- HEADER -->
+  <div class="projects-header">
+    <h1>Projects</h1>
+    <p>
+      Here are some of my featured projects. You can also view the full list on my
+      <a href="#">GitHub</a>.
+    </p>
+  </div>
+
+  <!-- CUBE CLUSTER (placeholder for future animation) -->
+  <div class="projects-cluster"></div>
+
+  <!-- PROJECTS SHOWCASE -->
+  <div class="projects-showcase">
+    <div class="projects-track">
+
+      <!-- CARD -->
+      <article class="projects-card">
+        <div class="projects-preview">
+          <img src="assets/myBonsoul.png" alt="Project preview">
+        </div>
+
+        <div class="projects-hover">
+          <h3>myBonsoul – Website</h3>
+          <p>
+            Responsive Website for skincare products created on shopify.
+          </p>
+
+          <div class="projects-tech">
+            <span>Shopify</span>
+            <span>liquid</span>
+            <span>Payment Integration</span>
+          </div>
+
+          <a href="#" class="projects-link">View Project</a>
+        </div>
+      </article>
+
+      <!-- CARD -->
+      <article class="projects-card">
+        <div class="projects-preview">
+          <img src="assets/umraSolution.png" alt="Project preview">
+        </div>
+
+        <div class="projects-hover">
+          <h3>Personal Portfolio</h3>
+          <p>
+            Interactive developer portfolio focused on performance and clean UI.
+          </p>
+
+          <div class="projects-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
+          <a href="#" class="projects-link">View Project</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</section>
+<section class="journey">
+
+  <h1 class="title">My Journey</h1>
+  <p class="subtitle">
+    A brief overview of who I am and how technology became part of my life.
+  </p>
+
+  <div class="content">
+
+    <!-- LEFT -->
+    <div class="avatar-box floating">
+      <img src="assets/profile.png" alt="Developer Avatar" />
+
+      <span class="badge ts float-slow">TS</span>
+      <span class="badge js float-medium">JS</span>
+      <span class="badge react float-fast">⚛</span>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="info">
+      <h2>Hello, I’m <span>Soyab</span></h2>
+
+      <p class="description">
+I am a Full-Stack Developer with 2 years of experience building modern, high-performance web applications. My journey into technology began in 2023, and since then I have been focused on crafting scalable, efficient, and visually refined solutions using modern tools and frameworks
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>💜 Clean Code</h3>
+          <p>Scalable architecture and best development practices</p>
+        </div>
+
+        <div class="card">
+          <h3>🚀 Performance</h3>
+          <p>Optimized applications for speed and efficiency</p>
+        </div>
+
+        <div class="card">
+          <h3>🧠 Problem Solving</h3>
+          <p>Creative and analytical approach to complex challenges</p>
+        </div>
+
+        <div class="card">
+          <h3>✨ Innovation</h3>
+          <p>Always exploring new technologies and industry trends</p>
+        </div>
+      </div>
+
+      <div class="buttons2">
+        <a href="#skills" class="btn2 primary">View My Skills</a>
+        <a href="#projects" class="btn2 outline">My Projects</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="exp-section">
+
+  <h1 class="exp-title exp-reveal">Professional Experience</h1>
+
+  <p class="exp-subtitle exp-reveal exp-delay-1">
+    Turning ideas into robust digital solutions as a freelance developer
+  </p>
+
+  <div class="exp-timeline">
+
+    <div class="exp-card exp-reveal exp-delay-2">
+
+      <span class="exp-timeline-dot"></span>
+
+      <div class="exp-header">
+        <div>
+          <h2 class="exp-role">Full-Stack Freelance Developer</h2>
+          <span class="exp-date">2022 — Present</span>
+        </div>
+
+        <div class="exp-tech">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>TypeScript</span>
+        </div>
+      </div>
+
+      <div class="exp-content">
+
+        <div class="exp-metrics">
+          <div class="exp-metric">
+            <strong>📈 Organic Traffic Growth</strong>
+            <p>+50% through advanced technical SEO strategies</p>
+          </div>
+
+          <div class="exp-metric">
+            <strong>⚡ Performance Improvement</strong>
+            <p>+20% after legacy system migration and modernization</p>
+          </div>
+
+          <div class="exp-metric">
+            <strong>✅ Project Delivery</strong>
+            <p>100% of projects delivered on time</p>
+          </div>
+        </div>
+
+        <div class="exp-details">
+          <p>
+            Developed full-stack web applications using React, Node.js,
+            TypeScript, Firebase, and MongoDB, ensuring high performance
+            and scalability.
+          </p>
+
+          <p>
+            Led migration and modernization of legacy systems, updating
+            dependencies, resolving critical bugs, and managing projects
+            end-to-end for international clients.
+          </p>
+        </div>
+
+      </div>
+    </div>
+        <div class="exp-card exp-reveal exp-delay-2">
+
+      <span class="exp-timeline-dot"></span>
+
+      <div class="exp-header">
+        <div>
+          <h2 class="exp-role">Full-Stack Freelance Developer</h2>
+          <span class="exp-date">2022 — Present</span>
+        </div>
+
+        <div class="exp-tech">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>TypeScript</span>
+        </div>
+      </div>
+
+      <div class="exp-content">
+
+        <div class="exp-metrics">
+          <div class="exp-metric">
+            <strong>📈 Organic Traffic Growth</strong>
+            <p>+50% through advanced technical SEO strategies</p>
+          </div>
+
+          <div class="exp-metric">
+            <strong>⚡ Performance Improvement</strong>
+            <p>+20% after legacy system migration and modernization</p>
+          </div>
+
+          <div class="exp-metric">
+            <strong>✅ Project Delivery</strong>
+            <p>100% of projects delivered on time</p>
+          </div>
+        </div>
+
+        <div class="exp-details">
+          <p>
+            Developed full-stack web applications using React, Node.js,
+            TypeScript, Firebase, and MongoDB, ensuring high performance
+            and scalability.
+          </p>
+
+          <p>
+            Led migration and modernization of legacy systems, updating
+            dependencies, resolving critical bugs, and managing projects
+            end-to-end for international clients.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section
+  id="contact-section"
+  class="contact-section"
+>
+  <div
+    id="contact-content"
+    class="contact-content"
+  >
+    <h1
+      id="contact-title"
+      class="contact-title"
+    >
+      Wants to talk ?
+    </h1>
+
+    <p
+      id="contact-description"
+      class="contact-description"
+    >
+I'm open to new opportunities and collaborations. If you have an interesting project or just want to chat!
+    </p>
+
+    <div
+      id="contact-buttons"
+      class="contact-buttons"
+    >
+      <a
+        id="contact-btn-email"
+        class="contact-btn contact-btn-primary"
+        href="#"
+      >
+        <span class="contact-btn-icon">✉</span>
+        <span class="contact-btn-text">Email</span>
+      </a>
+
+      <a
+        id="contact-btn-linkedin"
+        class="contact-btn"
+        href="https://www.linkedin.com/in/ken002/"
+      >
+        <span class="contact-btn-icon">in</span>
+        <span class="contact-btn-text">LinkedIn</span>
+      </a>
+
+      <a
+        id="contact-btn-github"
+        class="contact-btn"
+        href="https://github.com/soyabk04"
+      >
+        <span class="contact-btn-icon"></span>
+        <span class="contact-btn-text">GitHub</span>
+      </a>
+    </div>
+  </div>
+
+  <footer
+    id="contact-footer"
+    class="contact-footer"
+  >
+    <div
+      id="contact-footer-left"
+      class="contact-footer-left"
+    >
+      <div
+        id="contact-footer-logo"
+        class="contact-footer-logo"
+      >
+        sk
+      </div>
+
+      <span
+        id="contact-footer-name"
+        class="contact-footer-name"
+      >
+         Soyab
+      </span>
+    </div>
+
+    <div
+      id="contact-footer-center"
+      class="contact-footer-center"
+    >
+      <span id="contact-footer-icon-github" class="contact-footer-icon"></span>
+      <span id="contact-footer-icon-linkedin" class="contact-footer-icon">in</span>
+      <span id="contact-footer-icon-email" class="contact-footer-icon">✉</span>
+    </div>
+
+    <div
+      id="contact-footer-right"
+      class="contact-footer-right"
+    >
+      <p
+        id="contact-footer-copyright"
+        class="contact-footer-text"
+      >
+        © 2025 Soyab
+      </p>
+
+      <p
+        id="contact-footer-stack"
+        class="contact-footer-text"
+      >
+        
+      </p>
+    </div>
+  </footer>
+</section>
+
+
+<script src="skills.js"></script>
+<script src="script.js"></script>
+<script>
+  const reveals = document.querySelectorAll('.exp-reveal');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('exp-active');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

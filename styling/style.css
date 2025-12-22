@@ -1,0 +1,218 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #000;
+  color: #f0f494;
+  font-family: system-ui, sans-serif;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* CANVAS */
+#c {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ===== CONTENT WRAPPER ===== */
+.prp {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 720px;
+  padding: 0px 24px 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== ORBIT (CENTERED ON CONTENT) ===== */
+.hero-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 560px;
+  height: 560px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-orbit .banner {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Orbit rotation */
+.banner .slider {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  animation: spin 26s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(-18deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-18deg) rotateY(360deg);
+  }
+}
+
+/* Orbit items */
+.banner .item {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform:
+    rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+    translateZ(680px);
+}
+
+.banner img {
+  width: 66px;
+  height: 66px;
+  border-radius: 9px;
+  background: #fff;
+}
+
+/* ===== ORBIT TARGET ===== */
+.content-center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* PROFILE */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  z-index: 1;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.text h1 {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.text h2 {
+  font-size: 22px;
+}
+
+.text p {
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+/* BUTTONS */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.btn {
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.4);
+  color: #fff;
+  text-decoration: none;
+  transition: transform .25s ease, background .25s ease;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,.08);
+  transform: translateY(-2px);
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .hero-orbit {
+    width: 440px;
+    height: 440px;
+  }
+
+  .banner .item {
+    display: none;
+    transform:
+      rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+      translateZ(220px);
+  }
+
+  .text h1 {
+    font-size: 56px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 72px;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 128px;
+    height: 128px;
+  }
+
+  .text h1 {
+    font-size: 44px;
+  }
+
+  .text h2 {
+    font-size: 18px;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-orbit {
+    width: 360px;
+    height: 360px;
+    opacity: 0.6;
+  }
+
+  .banner .item {
+    transform:
+      rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+      translateZ(180px);
+  }
+}
